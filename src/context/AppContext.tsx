@@ -349,6 +349,10 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     localStorage.setItem('annsetu_auth_token', res.token);
     setCurrentUser(res.user);
     setIsAuthenticated(true);
+    const centreRes = await apiService.getCentres();
+if (centreRes && centreRes.centres) {
+  setCentres(centreRes.centres);
+}
 
     const sessionObj: AuthSession = {
       isAuthenticated: true,
@@ -499,7 +503,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const logout = () => {
     setIsAuthenticated(false);
     setSessionState(null);
-    setCentres([]);
+    setCentres(INITIAL_CENTRES);
     setTokens([]);
     setAnalytics(INITIAL_ANALYTICS);
     localStorage.removeItem('annsetu_auth_token');
