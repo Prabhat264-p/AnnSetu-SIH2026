@@ -8,3 +8,5 @@ coverage/
 .env.*
 !.env.example
 .antigravity/
+.env
+node_modules/
