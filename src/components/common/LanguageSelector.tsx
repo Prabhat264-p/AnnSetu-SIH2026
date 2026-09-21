@@ -129,10 +129,7 @@ export const LanguageSelector: React.FC<LanguageSelectorProps> = ({
                       : 'text-[#414844] hover:bg-[#f3f4f1] font-medium'
                   }`}
                 >
-                  <span className="flex items-center gap-2">
-                    <span className="text-sm">🌐</span>
-                    <span>{opt.label}</span>
-                  </span>
+                  <span>{opt.label}</span>
                   {isSelected && <Check className="w-4 h-4 text-[#2c694e] shrink-0" />}
                 </button>
               );

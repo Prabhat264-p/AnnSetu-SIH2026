@@ -401,11 +401,11 @@ export const VoiceSearchModal: React.FC<VoiceSearchModalProps> = ({
   if (!isOpen) return null;
 
   const getErrorTitle = () => {
-    if (errorCode === 'NO_SPEECH') return "🎙️ Couldn't hear you";
-    if (errorCode === 'MICROPHONE_PERMISSION_DENIED') return '🎙️ Microphone Access Required';
-    if (errorCode === 'API_CONNECTION_FAILED' || errorCode === 'BACKEND_UNAVAILABLE') return '⚠️ Voice Service Unavailable';
-    if (errorCode === 'STT_KEYS_NOT_CONFIGURED') return '⚠️ STT API Keys Unconfigured';
-    return "⚠️ Couldn't understand speech";
+    if (errorCode === 'NO_SPEECH') return "Couldn't hear you";
+    if (errorCode === 'MICROPHONE_PERMISSION_DENIED') return 'Microphone Access Required';
+    if (errorCode === 'API_CONNECTION_FAILED' || errorCode === 'BACKEND_UNAVAILABLE') return 'Voice Service Unavailable';
+    if (errorCode === 'STT_KEYS_NOT_CONFIGURED') return 'STT API Keys Unconfigured';
+    return "Couldn't understand speech";
   };
 
   return (
@@ -418,7 +418,7 @@ export const VoiceSearchModal: React.FC<VoiceSearchModalProps> = ({
               <Mic className="w-4 h-4 text-[#2c694e]" />
             </div>
             <div>
-              <h3 className="font-black text-base text-[#012d1d]">🎙️ Speak to Search</h3>
+              <h3 className="font-black text-base text-[#012d1d]">Speak to Search</h3>
               <p className="text-[10px] text-[#717973] font-medium">
                 Tell us what crop and location you need
               </p>
@@ -522,7 +522,7 @@ export const VoiceSearchModal: React.FC<VoiceSearchModalProps> = ({
             <div>
               <div className="inline-flex items-center gap-1.5 bg-[#2c694e] text-white px-3 py-1 rounded-full text-xs font-black">
                 <span className="w-2 h-2 rounded-full bg-red-400 animate-ping"></span>
-                <span>🔴 Listening... Tap mic when done speaking</span>
+                <span>Listening... Tap mic when done speaking</span>
               </div>
               <p className="text-xs text-[#717973] font-medium mt-2">
                 {selectedLang === 'hi-IN'
@@ -581,14 +581,14 @@ export const VoiceSearchModal: React.FC<VoiceSearchModalProps> = ({
               <div className="grid grid-cols-2 gap-2 text-xs">
                 {extractedParams.crop && (
                   <div className="bg-white p-2.5 rounded-xl border border-[#c1c8c2]/40">
-                    <span className="text-[10px] text-[#717973] font-bold block">🌾 Crop Commodity</span>
+                    <span className="text-[10px] text-[#717973] font-bold block">Crop Commodity</span>
                     <span className="font-black text-[#012d1d] text-xs">{extractedParams.crop}</span>
                   </div>
                 )}
 
                 {extractedParams.state && (
                   <div className="bg-white p-2.5 rounded-xl border border-[#c1c8c2]/40">
-                    <span className="text-[10px] text-[#717973] font-bold block">🏛️ State</span>
+                    <span className="text-[10px] text-[#717973] font-bold block">State</span>
                     <span className="font-black text-[#012d1d] text-xs">
                       {extractedParams.state} {extractedParams.stateCode ? `(${extractedParams.stateCode})` : ''}
                     </span>
@@ -597,7 +597,7 @@ export const VoiceSearchModal: React.FC<VoiceSearchModalProps> = ({
 
                 {extractedParams.district && (
                   <div className="bg-white p-2.5 rounded-xl border border-[#c1c8c2]/40">
-                    <span className="text-[10px] text-[#717973] font-bold block">📍 District Location</span>
+                    <span className="text-[10px] text-[#717973] font-bold block">District Location</span>
                     <span className="font-black text-[#012d1d] text-xs">
                       {extractedParams.district} {extractedParams.districtCode ? `(${extractedParams.districtCode})` : ''}
                     </span>
@@ -606,14 +606,14 @@ export const VoiceSearchModal: React.FC<VoiceSearchModalProps> = ({
 
                 {extractedParams.block && (
                   <div className="bg-white p-2.5 rounded-xl border border-[#c1c8c2]/40">
-                    <span className="text-[10px] text-[#717973] font-bold block">🏢 Block / Tehsil</span>
+                    <span className="text-[10px] text-[#717973] font-bold block">Block / Tehsil</span>
                     <span className="font-black text-[#012d1d] text-xs">{extractedParams.block}</span>
                   </div>
                 )}
 
                 {extractedParams.quantity && (
                   <div className="bg-white p-2.5 rounded-xl border border-[#c1c8c2]/40">
-                    <span className="text-[10px] text-[#717973] font-bold block">⚖️ Yield Quantity</span>
+                    <span className="text-[10px] text-[#717973] font-bold block">Yield Quantity</span>
                     <span className="font-black text-[#2c694e] text-xs">{extractedParams.quantity} Quintals</span>
                   </div>
                 )}
@@ -626,7 +626,7 @@ export const VoiceSearchModal: React.FC<VoiceSearchModalProps> = ({
                 onClick={handleStartListening}
                 className="flex-1 h-[48px] bg-white text-[#012d1d] font-extrabold text-xs rounded-2xl border border-[#c1c8c2]/60 hover:bg-[#f3f4f1] cursor-pointer"
               >
-                🎙️ Speak Again
+                Speak Again
               </button>
 
               <button
@@ -661,7 +661,7 @@ export const VoiceSearchModal: React.FC<VoiceSearchModalProps> = ({
                 onClick={handleStartListening}
                 className="bg-[#1b4332] text-white px-4 py-2.5 rounded-xl text-xs font-black cursor-pointer shadow-xs"
               >
-                🎙️ Try Again
+                Try Again
               </button>
 
               <button
@@ -669,7 +669,7 @@ export const VoiceSearchModal: React.FC<VoiceSearchModalProps> = ({
                 onClick={onClose}
                 className="bg-white text-[#012d1d] px-4 py-2.5 rounded-xl text-xs font-bold border border-red-200 cursor-pointer"
               >
-                ⌨️ Search Manually
+                Search Manually
               </button>
             </div>
           </div>
@@ -691,7 +691,7 @@ export const VoiceSearchModal: React.FC<VoiceSearchModalProps> = ({
               onClick={onClose}
               className="bg-[#1b4332] text-white px-5 py-2.5 rounded-xl text-xs font-black cursor-pointer"
             >
-              ⌨️ Search Manually
+              Search Manually
             </button>
           </div>
         )}
@@ -700,7 +700,7 @@ export const VoiceSearchModal: React.FC<VoiceSearchModalProps> = ({
         {showDiagnostics && (
           <div className="bg-slate-900 text-slate-100 p-4 rounded-2xl text-[11px] font-mono space-y-2.5 border border-slate-700 animate-in fade-in">
             <div className="flex items-center justify-between border-b border-slate-800 pb-1.5 text-amber-400 font-bold">
-              <span>🐞 DEV DIAGNOSTICS PANEL</span>
+              <span>DEV DIAGNOSTICS PANEL</span>
               <span>LANG: {selectedLang}</span>
             </div>
 
@@ -800,7 +800,7 @@ export const VoiceSearchModal: React.FC<VoiceSearchModalProps> = ({
             {/* LOCATION EXTRACTION & FORM SYNC DIAGNOSTICS */}
             {extractedParams && (
               <div className="p-2.5 bg-slate-950 rounded-xl border border-slate-800 space-y-1 text-[10px]">
-                <div className="text-amber-400 font-bold text-[11px]">📍 LOCATION EXTRACTION DIAGNOSTICS</div>
+                <div className="text-amber-400 font-bold text-[11px]">LOCATION EXTRACTION DIAGNOSTICS</div>
                 <div className="text-slate-300">
                   Raw input: <span className="text-white italic">"{extractedParams.rawText}"</span>
                 </div>
@@ -817,7 +817,7 @@ export const VoiceSearchModal: React.FC<VoiceSearchModalProps> = ({
                   Resolution status: <span className={extractedParams.state || extractedParams.district ? 'text-green-400 font-bold' : 'text-amber-400 font-bold'}>{extractedParams.state || extractedParams.district ? 'SUCCESS' : 'NO_LOCATION'}</span>
                 </div>
 
-                <div className="text-amber-400 font-bold pt-1 text-[11px]">⚡ FORM SYNC & AUTO SEARCH</div>
+                <div className="text-amber-400 font-bold pt-1 text-[11px]">FORM SYNC & AUTO SEARCH</div>
                 <div className="text-slate-300">
                   state: <span className="text-green-400 font-bold">SUCCESS</span> | district: <span className="text-green-400 font-bold">SUCCESS</span> | block: <span className="text-green-400 font-bold">SUCCESS</span> | crop: <span className="text-green-400 font-bold">SUCCESS</span>
                 </div>

@@ -21,11 +21,11 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({ currentPath, o
 
   if (currentUser.role === 'FARMER') {
     const tabs = [
-      { label: `🏠 ${t('dashboard')}`, path: '/farmer/dashboard', icon: LayoutDashboard },
-      { label: `📍 ${t('findProcurementCentre')}`, path: '/farmer/centres', icon: Search },
-      { label: `🎟️ ${t('myTurn')}`, path: '/farmer/live-queue', icon: Ticket },
-      { label: `📋 ${t('myBookings')}`, path: '/farmer/my-bookings', icon: History },
-      { label: `👤 ${t('profile')}`, path: '/farmer/profile', icon: User },
+      { label: t('dashboard'), path: '/farmer/dashboard', icon: LayoutDashboard },
+      { label: t('findProcurementCentre'), path: '/farmer/centres', icon: Search },
+      { label: t('myTurn'), path: '/farmer/live-queue', icon: Ticket },
+      { label: t('myBookings'), path: '/farmer/my-bookings', icon: History },
+      { label: t('profile'), path: '/farmer/profile', icon: User },
     ];
 
     return (

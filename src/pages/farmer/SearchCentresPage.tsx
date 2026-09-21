@@ -196,7 +196,7 @@ export const SearchCentresPage: React.FC<SearchCentresPageProps> = ({
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="⌨️ Search by centre name, mandis, state, or address..."
+            placeholder="Search by centre name, mandis, state, or address..."
             className="w-full bg-[#f3f4f1] pl-10 pr-4 py-2.5 rounded-2xl text-xs md:text-sm text-[#012d1d] font-bold placeholder:text-[#717973] border-none focus:ring-2 focus:ring-[#1b4332] outline-none"
           />
         </div>

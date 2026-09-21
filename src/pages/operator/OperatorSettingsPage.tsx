@@ -94,7 +94,7 @@ export const OperatorSettingsPage: React.FC<OperatorSettingsPageProps> = ({
             </div>
 
             <div className="space-y-1">
-              <label className="font-bold text-[#717973] block">Official Government ID</label>
+              <label className="font-bold text-[#717973] block">Official ID</label>
               <input
                 type="text"
                 value={officialIdDisplay}

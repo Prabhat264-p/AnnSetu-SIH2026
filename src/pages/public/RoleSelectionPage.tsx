@@ -8,7 +8,6 @@ import {
   CheckCircle2,
   HelpCircle,
   Phone,
-  Sparkles,
 } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 import { Language, UserRole } from '../../types';
@@ -142,11 +141,6 @@ export const RoleSelectionPage: React.FC<RoleSelectionPageProps> = ({ onSelectRo
       <main className="flex-1 flex flex-col items-center justify-center max-w-5xl mx-auto w-full px-3 py-2 my-auto">
         {/* Welcome Section */}
         <div className="text-center space-y-0.5 mb-5 sm:mb-6">
-          <div className="inline-flex items-center gap-1.5 bg-[#f3f9f5] border border-[#2c694e]/30 px-3.5 py-1 rounded-full text-xs font-bold text-[#012d1d] mb-3">
-            <Sparkles className="w-3.5 h-3.5 text-[#2c694e]" />
-            <span>Govt of India Procurement Scheduling Platform</span>
-          </div>
-
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#012d1d] tracking-tight leading-none mb-2">
             Welcome to AnnSetu
           </h1>
@@ -249,7 +243,7 @@ export const RoleSelectionPage: React.FC<RoleSelectionPageProps> = ({ onSelectRo
       <footer className="h-[36px] shrink-0 pt-2 border-t border-[#c1c8c2]/40 flex items-center justify-between text-[10px] sm:text-xs text-[#717973]">
         <div className="flex items-center gap-1 font-semibold">
           <span className="text-[#012d1d] font-bold">AnnSetu Platform</span>
-          <span>• 24x7 Government Helpline: 1800-180-1551</span>
+          <span>• Helpline: 1800-180-1551</span>
         </div>
 
         <button

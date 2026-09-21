@@ -166,7 +166,7 @@ export const AdminFarmersPage: React.FC = () => {
               <Users className="w-4 h-4" />
             </div>
             <span className="text-xs font-mono font-bold text-[#2c694e] bg-[#f3f4f1] px-2.5 py-0.5 rounded-md">
-              {currentUser.stateName || 'Govt'} / {currentUser.districtName || 'District'} HQ
+              {currentUser.stateName || 'State'} / {currentUser.districtName || 'District'} HQ
             </span>
           </div>
           <h1 className="text-2xl md:text-3xl font-extrabold text-[#012d1d] tracking-tight mt-1">

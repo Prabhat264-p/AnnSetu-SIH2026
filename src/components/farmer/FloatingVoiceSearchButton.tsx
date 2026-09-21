@@ -26,7 +26,7 @@ export const FloatingVoiceSearchButton: React.FC<FloatingVoiceSearchButtonProps>
     <div className="fixed bottom-7 right-5 sm:right-7 z-40 animate-in slide-in-from-bottom duration-300 pointer-events-auto select-none group flex items-center gap-2">
       {/* Tooltip on Hover / Focus */}
       <div className="hidden sm:block opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-[#012d1d] text-white text-xs font-black px-3 py-1.5 rounded-xl border border-[#aeeecb]/40 shadow-lg whitespace-nowrap">
-        🎙️ {tooltipText}
+        {tooltipText}
       </div>
 
       {/* Small Circular Floating Action Button */}

@@ -77,7 +77,7 @@ export const SmartRecommendationCard: React.FC<SmartRecommendationCardProps> = (
                   : 'bg-amber-50 text-amber-800 border border-amber-200'
               }`}
             >
-              {centre.source === 'OFFICIAL_GOVT' ? '✓ Verified APMC' : 'ℹ️ Demo Centre'}
+              {centre.source === 'OFFICIAL_GOVT' ? '✓ Verified APMC' : 'Demo Centre'}
             </span>
           </div>
 

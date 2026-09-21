@@ -673,7 +673,7 @@ if (centreRes && centreRes.centres) {
     const newNotif: AppNotification = {
       id: `notif_${Date.now()}`,
       userId: currentUser.id,
-      title: `Token Confirmed: ${tokenNumber} 🎉`,
+      title: `Token Confirmed: ${tokenNumber}`,
       message: `Your appointment is confirmed at ${targetCentre.name} on ${date} (${timeSlot}).`,
       type: 'TOKEN_CONFIRMED',
       read: false,
@@ -817,7 +817,7 @@ if (centreRes && centreRes.centres) {
     const notif: AppNotification = {
       id: `notif_${Date.now()}`,
       userId: nextToken.farmerId,
-      title: `It's Your Turn! (Token ${nextToken.tokenNumber}) 🔔`,
+      title: `It's Your Turn! (Token ${nextToken.tokenNumber})`,
       message: `Please proceed immediately to Counter 1 at ${nextToken.centreName} for grain weighing & verification.`,
       type: 'PROCEED_TO_CENTRE',
       read: false,

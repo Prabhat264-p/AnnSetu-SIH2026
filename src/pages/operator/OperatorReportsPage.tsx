@@ -122,7 +122,7 @@ export const OperatorReportsPage: React.FC<OperatorReportsPageProps> = ({
         {/* Crop-Wise Breakdown Chart Card */}
         <div className="bg-white p-6 rounded-3xl border border-[#c1c8c2]/60 shadow-xs space-y-4">
           <div className="flex items-center justify-between border-b border-[#eeeeeb] pb-3">
-            <h3 className="font-bold text-base text-[#012d1d]">🌾 Crop Procurement Volume (Qtl)</h3>
+            <h3 className="font-bold text-base text-[#012d1d]">Crop Procurement Volume (Qtl)</h3>
             <span className="text-xs font-bold text-[#2c694e]">{completedTokens.length} Completed Tokens</span>
           </div>
 
@@ -151,7 +151,7 @@ export const OperatorReportsPage: React.FC<OperatorReportsPageProps> = ({
         {/* Slot Utilization & Throughput */}
         <div className="bg-white p-6 rounded-3xl border border-[#c1c8c2]/60 shadow-xs space-y-4">
           <div className="flex items-center justify-between border-b border-[#eeeeeb] pb-3">
-            <h3 className="font-bold text-base text-[#012d1d]">⏰ Time Slot Capacity Utilization</h3>
+            <h3 className="font-bold text-base text-[#012d1d]">Time Slot Capacity Utilization</h3>
             <span className="text-xs font-bold bg-[#c1ecd4] text-[#002114] px-2.5 py-0.5 rounded-md">
               {centre.availableSlots} Slots Available
             </span>

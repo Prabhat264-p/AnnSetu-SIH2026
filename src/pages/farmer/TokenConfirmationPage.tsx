@@ -62,7 +62,7 @@ export const TokenConfirmationPage: React.FC<TokenConfirmationPageProps> = ({
           <CheckCircle2 className="w-8 h-8 text-[#012d1d]" />
         </div>
         <h1 className="text-2xl sm:text-3xl font-black text-[#012d1d] tracking-tight">
-          🎉 {t('tokenConfirmedTitle')}
+          {t('tokenConfirmedTitle')}
         </h1>
         <p className="text-xs sm:text-sm text-[#414844] font-medium max-w-md mx-auto">
           {t('pleaseArriveEarly')}
@@ -71,7 +71,7 @@ export const TokenConfirmationPage: React.FC<TokenConfirmationPageProps> = ({
 
       {/* Arrival Reminder Alert Card */}
       <div className="bg-[#fff8e1] border border-amber-300 p-4 rounded-2xl text-xs font-bold text-[#7a5802] flex items-center gap-3">
-        <span className="text-xl">💡</span>
+        <Sparkles className="w-5 h-5 text-amber-700 shrink-0" />
         <div>
           <p className="font-extrabold">Reminder for Kisan:</p>
           <p className="text-[11px] font-medium">Please bring your Kisan Credit Card / Aadhaar ID and arrive 10–15 minutes before {currentToken.timeSlot}.</p>
@@ -91,7 +91,7 @@ export const TokenConfirmationPage: React.FC<TokenConfirmationPageProps> = ({
           className="min-h-[50px] bg-[#1b4332] hover:bg-[#012d1d] text-white font-extrabold text-xs sm:text-sm px-6 py-3.5 rounded-2xl flex items-center justify-center gap-2 shadow-md cursor-pointer transition-all active:scale-98"
         >
           <ListOrdered className="w-4 h-4 text-[#aeeecb]" />
-          <span>⏱️ Track Live Queue Turn</span>
+          <span>Track Live Queue Turn</span>
         </button>
 
         <button

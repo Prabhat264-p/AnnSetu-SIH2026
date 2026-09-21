@@ -48,7 +48,7 @@ export const UniversalQuantityInput: React.FC<UniversalQuantityInputProps> = ({
     <div className="space-y-5 select-none">
       <div className="text-center space-y-1">
         <h3 className="text-lg sm:text-xl font-black text-[#012d1d]">
-          ⚖️ How much crop?
+          How much crop?
         </h3>
         <p className="text-xs text-[#717973] font-medium">
           Enter your yield quantity manually or choose a quick option.
@@ -102,7 +102,7 @@ export const UniversalQuantityInput: React.FC<UniversalQuantityInputProps> = ({
 
         {!isValid && (
           <p className="text-xs font-bold text-[#ba1a1a] animate-in fade-in">
-            ⚠️ Please enter a valid quantity greater than 0.
+            Please enter a valid quantity greater than 0.
           </p>
         )}
 

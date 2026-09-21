@@ -64,7 +64,7 @@ async function runMobileLanguageSelectorTests() {
   // 4. RoleLoginPage Render Verification
   console.log('\n4. RoleLoginPage Header Component Integration:');
   const roleLoginHtml = renderToString(
-    React.createElement(AppProvider, null, React.createElement(RoleLoginPage, { role: 'FARMER', onNavigate: () => {} }))
+    React.createElement(AppProvider, null, React.createElement(RoleLoginPage, { role: 'FARMER', onNavigate: () => {}, onChangeRole: () => {} }))
   );
   assert(roleLoginHtml.includes('aria-label="Select application language"'), 'RoleLoginPage renders mobile LanguageSelector');
 

@@ -172,7 +172,7 @@ export const OperatorDashboardPage: React.FC<OperatorDashboardPageProps> = ({
         {/* Today's Crop Breakdown */}
         <div className="bg-white p-5 rounded-3xl border border-[#c1c8c2]/60 shadow-xs space-y-4">
           <div className="flex items-center justify-between border-b border-[#eeeeeb] pb-3">
-            <h3 className="font-bold text-base text-[#012d1d]">🌾 Today's Procurement by Crop</h3>
+            <h3 className="font-bold text-base text-[#012d1d]">Today's Procurement by Crop</h3>
             <button
               type="button"
               onClick={() => onNavigate('/operator/procurement-records')}
@@ -196,7 +196,7 @@ export const OperatorDashboardPage: React.FC<OperatorDashboardPageProps> = ({
         {/* Counter Status Overview */}
         <div className="bg-white p-5 rounded-3xl border border-[#c1c8c2]/60 shadow-xs space-y-4">
           <div className="flex items-center justify-between border-b border-[#eeeeeb] pb-3">
-            <h3 className="font-bold text-base text-[#012d1d]">🏢 Active Weighbridge Counters</h3>
+            <h3 className="font-bold text-base text-[#012d1d]">Active Weighbridge Counters</h3>
             <span className="text-xs font-bold bg-[#c1ecd4] text-[#002114] px-2.5 py-0.5 rounded-md">
               {centre.activeCounters} / {centre.counters} Active
             </span>
@@ -252,7 +252,6 @@ export const OperatorDashboardPage: React.FC<OperatorDashboardPageProps> = ({
           onClick={() => onNavigate('/operator/queue')}
           className="bg-white p-4 rounded-2xl border border-[#c1c8c2]/60 hover:border-[#1b4332] text-center space-y-1 shadow-2xs hover:shadow-xs transition-all cursor-pointer"
         >
-          <span className="text-xl">📋</span>
           <h4 className="font-extrabold text-xs text-[#012d1d]">Live Queue</h4>
           <p className="text-[10px] text-[#717973]">{waitingCount} Waiting</p>
         </button>
@@ -262,7 +261,6 @@ export const OperatorDashboardPage: React.FC<OperatorDashboardPageProps> = ({
           onClick={() => onNavigate('/operator/token-list')}
           className="bg-white p-4 rounded-2xl border border-[#c1c8c2]/60 hover:border-[#1b4332] text-center space-y-1 shadow-2xs hover:shadow-xs transition-all cursor-pointer"
         >
-          <span className="text-xl">🎟️</span>
           <h4 className="font-extrabold text-xs text-[#012d1d]">Token Directory</h4>
           <p className="text-[10px] text-[#717973]">{centreTokens.length} Tokens</p>
         </button>
@@ -272,7 +270,6 @@ export const OperatorDashboardPage: React.FC<OperatorDashboardPageProps> = ({
           onClick={() => onNavigate('/operator/procurement-records')}
           className="bg-white p-4 rounded-2xl border border-[#c1c8c2]/60 hover:border-[#1b4332] text-center space-y-1 shadow-2xs hover:shadow-xs transition-all cursor-pointer"
         >
-          <span className="text-xl">📄</span>
           <h4 className="font-extrabold text-xs text-[#012d1d]">Procurement Records</h4>
           <p className="text-[10px] text-[#717973]">{completedCount} Completed</p>
         </button>
@@ -282,7 +279,6 @@ export const OperatorDashboardPage: React.FC<OperatorDashboardPageProps> = ({
           onClick={() => onNavigate('/operator/reports')}
           className="bg-white p-4 rounded-2xl border border-[#c1c8c2]/60 hover:border-[#1b4332] text-center space-y-1 shadow-2xs hover:shadow-xs transition-all cursor-pointer"
         >
-          <span className="text-xl">📊</span>
           <h4 className="font-extrabold text-xs text-[#012d1d]">Centre Reports</h4>
           <p className="text-[10px] text-[#717973]">Daily Analytics</p>
         </button>

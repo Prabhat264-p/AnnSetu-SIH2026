@@ -37,7 +37,7 @@ export const DigitalTokenCard: React.FC<DigitalTokenCardProps> = ({
   const handleDownload = () => {
     const passContent = `=====================================================
 ANNSETU DIGITAL PROCUREMENT TOKEN (SIH26032)
-Govt. of India & State Agriculture Marketing Board
+State Agriculture Marketing Board
 =====================================================
 Token Number : ${token.tokenNumber}
 Status       : ${token.status}
@@ -65,13 +65,13 @@ Helpline     : 1800-180-1551 (Toll-Free)
     switch (status) {
       case 'CONFIRMED':
       case 'SCHEDULED':
-        return { bg: 'bg-[#aeeecb]', text: 'text-[#002114]', border: 'border-[#2c694e]/30', label: '🟢 Booking Confirmed' };
+        return { bg: 'bg-[#aeeecb]', text: 'text-[#002114]', border: 'border-[#2c694e]/30', label: 'Booking Confirmed' };
       case 'WAITING':
-        return { bg: 'bg-[#fef3c7]', text: 'text-[#92400e]', border: 'border-amber-400', label: '🟡 Turn Approaching' };
+        return { bg: 'bg-[#fef3c7]', text: 'text-[#92400e]', border: 'border-amber-400', label: 'Turn Approaching' };
       case 'VERIFIED':
-        return { bg: 'bg-[#dbeafe]', text: 'text-[#1e40af]', border: 'border-blue-300', label: '🔵 Documents Verified' };
+        return { bg: 'bg-[#dbeafe]', text: 'text-[#1e40af]', border: 'border-blue-300', label: 'Documents Verified' };
       case 'PROCESSING':
-        return { bg: 'bg-[#e0e7ff]', text: 'text-[#3730a3]', border: 'border-indigo-300', label: '🟣 At Weighbridge' };
+        return { bg: 'bg-[#e0e7ff]', text: 'text-[#3730a3]', border: 'border-indigo-300', label: 'At Weighbridge' };
       case 'COMPLETED':
         return { bg: 'bg-[#dcfce7]', text: 'text-[#166534]', border: 'border-emerald-500', label: '✓ Visit Completed' };
       default:
@@ -93,8 +93,8 @@ Helpline     : 1800-180-1551 (Toll-Free)
               <Tractor className="w-4 h-4" />
             </div>
             <div>
-              <h3 className="font-extrabold text-sm tracking-tight text-white">🎟️ Procurement Pass</h3>
-              <p className="text-[10px] text-[#c1ecd4] font-medium">Govt APMC Platform</p>
+              <h3 className="font-extrabold text-sm tracking-tight text-white">Procurement Pass</h3>
+              <p className="text-[10px] text-[#c1ecd4] font-medium">AnnSetu APMC Platform</p>
             </div>
           </div>
 
@@ -141,30 +141,30 @@ Helpline     : 1800-180-1551 (Toll-Free)
 
           <div className="grid grid-cols-2 gap-3 text-xs">
             <div className="bg-[#f9faf6] p-3 rounded-2xl border border-[#c1c8c2]/40">
-              <span className="text-[10px] text-[#717973] font-bold block">🌾 Crop</span>
+              <span className="text-[10px] text-[#717973] font-bold block">Crop</span>
               <span className="font-black text-[#012d1d] text-xs sm:text-sm block mt-0.5">{token.crop}</span>
             </div>
 
             <div className="bg-[#f9faf6] p-3 rounded-2xl border border-[#c1c8c2]/40">
-              <span className="text-[10px] text-[#717973] font-bold block">⚖️ Quantity</span>
+              <span className="text-[10px] text-[#717973] font-bold block">Quantity</span>
               <span className="font-black text-[#2c694e] text-xs sm:text-sm block mt-0.5">{token.quantityQuintals} Quintals</span>
             </div>
           </div>
 
           <div className="bg-[#f9faf6] p-3 rounded-2xl border border-[#c1c8c2]/40 text-xs">
-            <span className="text-[10px] text-[#717973] font-bold block">📍 Procurement Centre</span>
+            <span className="text-[10px] text-[#717973] font-bold block">Procurement Centre</span>
             <span className="font-black text-[#012d1d] block mt-0.5">{token.centreName}</span>
             <span className="text-[11px] text-[#717973] block">{token.centreDistrict} District</span>
           </div>
 
           <div className="grid grid-cols-2 gap-3 text-xs">
             <div className="bg-[#f9faf6] p-3 rounded-2xl border border-[#c1c8c2]/40">
-              <span className="text-[10px] text-[#717973] font-bold block">📅 Date</span>
+              <span className="text-[10px] text-[#717973] font-bold block">Date</span>
               <span className="font-bold text-[#012d1d] block mt-0.5">{token.date}</span>
             </div>
 
             <div className="bg-[#f9faf6] p-3 rounded-2xl border border-[#c1c8c2]/40">
-              <span className="text-[10px] text-[#717973] font-bold block">🕐 Time Slot</span>
+              <span className="text-[10px] text-[#717973] font-bold block">Time Slot</span>
               <span className="font-bold text-[#012d1d] block mt-0.5">{token.timeSlot}</span>
             </div>
           </div>

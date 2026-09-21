@@ -8,6 +8,7 @@ import {
   ShieldCheck,
   User as UserIcon,
   Phone,
+  AlertCircle,
 } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 import {
@@ -178,7 +179,7 @@ export const FarmerOnboardingPage: React.FC<FarmerOnboardingPageProps> = ({ onCo
 
         {errorMsg && (
           <div className="bg-red-50 text-red-800 p-3.5 rounded-2xl text-xs font-bold border border-red-200 flex items-center gap-2">
-            <span>⚠️</span>
+            <AlertCircle className="w-4 h-4 text-red-600 shrink-0" />
             <span>{errorMsg}</span>
           </div>
         )}

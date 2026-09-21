@@ -839,7 +839,7 @@ export const INITIAL_NOTIFICATIONS: AppNotification[] = [
   {
     id: 'notif_01',
     userId: 'usr_farmer_01',
-    title: 'Turn Approaching! 🌾',
+    title: 'Turn Approaching!',
     message: 'Your token WHT-08432 is 6th in queue. Please proceed towards Sinnar Procurement Centre weighbridge.',
     type: 'TURN_APPROACHING',
     read: false,

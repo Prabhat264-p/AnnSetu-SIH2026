@@ -384,7 +384,7 @@ export const FarmerProfilePage: React.FC = () => {
         <div className="bg-white rounded-3xl border border-[#c1c8c2]/60 p-6 shadow-xs space-y-4">
           <h3 className="font-bold text-sm text-[#012d1d] flex items-center gap-2">
             <ShieldCheck className="w-4 h-4 text-[#2c694e]" />
-            <span>Government ID & Kisan Verification</span>
+            <span>Kisan ID & Identity Verification</span>
           </h3>
 
           <div className="space-y-3 text-xs text-[#414844]">

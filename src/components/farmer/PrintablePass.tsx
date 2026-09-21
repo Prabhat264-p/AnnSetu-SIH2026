@@ -14,13 +14,13 @@ export const PrintablePass: React.FC<PrintablePassProps> = ({ token }) => {
       <div className="text-center pb-4 border-b-2 border-[#1b4332]">
         <h1 className="text-2xl font-black text-[#012d1d] tracking-tight">ANNSETU</h1>
         <p className="text-xs font-extrabold text-[#2c694e]">Smart Procurement Scheduling (SIH'26)</p>
-        <p className="text-[10px] text-gray-600 font-medium mt-0.5">Govt. of India & State Agriculture Marketing Board</p>
+        <p className="text-[10px] text-gray-600 font-medium mt-0.5">State Agriculture Marketing Board</p>
       </div>
 
       {/* 2. Token & Status */}
       <div className="py-4 text-center border-b border-gray-300 space-y-2">
         <span className="text-xs font-black uppercase text-[#2c694e] tracking-wider">
-          🎟️ DIGITAL PROCUREMENT PASS
+          DIGITAL PROCUREMENT PASS
         </span>
 
         <div className="p-4 bg-gray-50 border border-gray-300 rounded-2xl max-w-sm mx-auto">
@@ -31,7 +31,7 @@ export const PrintablePass: React.FC<PrintablePassProps> = ({ token }) => {
             {token.tokenNumber}
           </p>
           <p className="text-xs font-extrabold text-emerald-700 mt-1">
-            🟢 Booking Confirmed
+            Booking Confirmed
           </p>
         </div>
       </div>
@@ -45,30 +45,30 @@ export const PrintablePass: React.FC<PrintablePassProps> = ({ token }) => {
 
         <div className="grid grid-cols-2 gap-3 pt-1">
           <div>
-            <p className="text-[10px] text-gray-500 font-black uppercase tracking-wider">🌾 CROP COMMODITY</p>
+            <p className="text-[10px] text-gray-500 font-black uppercase tracking-wider">CROP COMMODITY</p>
             <p className="font-extrabold text-[#012d1d] text-sm">{token.crop}</p>
           </div>
 
           <div>
-            <p className="text-[10px] text-gray-500 font-black uppercase tracking-wider">⚖️ YIELD QUANTITY</p>
+            <p className="text-[10px] text-gray-500 font-black uppercase tracking-wider">YIELD QUANTITY</p>
             <p className="font-extrabold text-[#2c694e] text-sm">{token.quantityQuintals} Quintals</p>
           </div>
         </div>
 
         <div className="pt-1">
-          <p className="text-[10px] text-gray-500 font-black uppercase tracking-wider">📍 PROCUREMENT CENTRE</p>
+          <p className="text-[10px] text-gray-500 font-black uppercase tracking-wider">PROCUREMENT CENTRE</p>
           <p className="font-black text-[#012d1d] text-sm">{token.centreName}</p>
           <p className="text-[11px] text-gray-600 font-medium">{token.centreDistrict} District</p>
         </div>
 
         <div className="grid grid-cols-2 gap-3 pt-1">
           <div>
-            <p className="text-[10px] text-gray-500 font-black uppercase tracking-wider">📅 SCHEDULED DATE</p>
+            <p className="text-[10px] text-gray-500 font-black uppercase tracking-wider">SCHEDULED DATE</p>
             <p className="font-bold text-[#012d1d]">{token.date}</p>
           </div>
 
           <div>
-            <p className="text-[10px] text-gray-500 font-black uppercase tracking-wider">🕐 TIME SLOT</p>
+            <p className="text-[10px] text-gray-500 font-black uppercase tracking-wider">TIME SLOT</p>
             <p className="font-bold text-[#012d1d]">{token.timeSlot}</p>
           </div>
         </div>
@@ -118,7 +118,7 @@ export const PrintablePass: React.FC<PrintablePassProps> = ({ token }) => {
       {/* 5. Important Instructions & Footer */}
       <div className="pt-4 text-center space-y-2 text-xs">
         <p className="font-bold text-gray-800">
-          💡 Please arrive 10–15 minutes before your scheduled time slot with your Kisan ID.
+          Please arrive 10–15 minutes before your scheduled time slot with your Kisan ID.
         </p>
         <div className="pt-3 border-t border-gray-300">
           <p className="font-black text-[#012d1d] tracking-wide">AnnSetu</p>

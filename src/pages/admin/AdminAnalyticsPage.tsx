@@ -84,7 +84,7 @@ export const AdminAnalyticsPage: React.FC = () => {
             {typeof analytics.farmerSatisfactionScore === 'number' ? `${analytics.farmerSatisfactionScore} / 5.0` : 'N/A'}
           </p>
           <p className="text-[10px] text-[#2c694e] font-semibold mt-0.5">
-            {typeof analytics.farmerSatisfactionScore === 'number' ? '★ Top Rated Platform' : 'No ratings recorded yet'}
+            {typeof analytics.farmerSatisfactionScore === 'number' ? 'Top Rated Platform' : 'No ratings recorded yet'}
           </p>
         </div>
       </div>

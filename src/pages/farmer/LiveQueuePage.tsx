@@ -54,10 +54,10 @@ export const LiveQueuePage: React.FC<LiveQueuePageProps> = ({ onNavigate }) => {
                 ✓ Visit Completed
               </span>
               <h2 className="text-xl sm:text-2xl font-black text-[#012d1d] mt-1">
-                🌾 {completedToken.crop} ({completedToken.quantityQuintals} Qtl)
+                {completedToken.crop} ({completedToken.quantityQuintals} Qtl)
               </h2>
               <p className="text-xs text-[#717973] font-medium mt-0.5">
-                📍 {completedToken.centreName} • Token: <span className="font-mono font-bold text-[#012d1d]">{completedToken.tokenNumber}</span>
+                {completedToken.centreName} • Token: <span className="font-mono font-bold text-[#012d1d]">{completedToken.tokenNumber}</span>
               </p>
             </div>
 
@@ -66,13 +66,13 @@ export const LiveQueuePage: React.FC<LiveQueuePageProps> = ({ onNavigate }) => {
                 onClick={() => onNavigate('/farmer/my-bookings')}
                 className="w-full sm:w-auto bg-[#f3f4f1] hover:bg-[#e8e8e5] text-[#012d1d] font-extrabold text-xs px-5 py-3 rounded-2xl border border-[#c1c8c2]/60 cursor-pointer"
               >
-                📋 View Visit Details
+                View Visit Details
               </button>
               <button
                 onClick={() => onNavigate('/farmer/centres')}
                 className="w-full sm:w-auto bg-[#1b4332] hover:bg-[#012d1d] text-white font-extrabold text-xs px-6 py-3 rounded-2xl shadow-md cursor-pointer"
               >
-                📍 Find Centre to Book Again
+                Find Centre to Book Again
               </button>
             </div>
           </div>
@@ -83,13 +83,13 @@ export const LiveQueuePage: React.FC<LiveQueuePageProps> = ({ onNavigate }) => {
     return (
       <div className="space-y-6 max-w-md mx-auto pb-20 font-sans select-none animate-in fade-in">
         <div className="bg-white rounded-3xl border border-[#c1c8c2]/60 p-8 shadow-sm text-center space-y-4">
-          <div className="w-16 h-16 rounded-3xl bg-[#f3f9f5] text-[#2c694e] flex items-center justify-center mx-auto text-3xl shadow-xs">
-            🎟️
+          <div className="w-16 h-16 rounded-3xl bg-[#f3f9f5] text-[#2c694e] flex items-center justify-center mx-auto shadow-xs">
+            <QrCode className="w-8 h-8 text-[#2c694e]" />
           </div>
 
           <div>
             <h2 className="text-xl font-black text-[#012d1d]">
-              🎟️ No Active Turn
+              No Active Turn
             </h2>
             <p className="text-xs text-[#717973] font-medium mt-1">
               You don't have a booked turn yet. Find a nearby procurement centre to schedule your visit.
@@ -100,7 +100,7 @@ export const LiveQueuePage: React.FC<LiveQueuePageProps> = ({ onNavigate }) => {
             onClick={() => onNavigate('/farmer/centres')}
             className="w-full min-h-[50px] bg-[#1b4332] hover:bg-[#012d1d] text-white font-black text-xs sm:text-sm py-3.5 px-6 rounded-2xl flex items-center justify-center gap-2 shadow-lg cursor-pointer transition-all active:scale-98"
           >
-            <span>📍 Find Centre</span>
+            <span>Find Centre</span>
             <ArrowRight className="w-4 h-4 text-[#aeeecb]" />
           </button>
         </div>
@@ -124,11 +124,11 @@ export const LiveQueuePage: React.FC<LiveQueuePageProps> = ({ onNavigate }) => {
               <span>Home</span>
             </button>
             <span className="text-xs text-[#717973]">/</span>
-            <span className="text-xs font-bold text-[#2c694e]">🎟️ My Turn</span>
+            <span className="text-xs font-bold text-[#2c694e]">My Turn</span>
           </div>
 
           <h1 className="text-2xl sm:text-3xl font-black text-[#012d1d] tracking-tight mt-1">
-            🎟️ My Turn
+            My Turn
           </h1>
           <p className="text-xs text-[#717973] font-medium">
             Your token, booking and live queue status
@@ -153,7 +153,7 @@ export const LiveQueuePage: React.FC<LiveQueuePageProps> = ({ onNavigate }) => {
           <div className="bg-white rounded-3xl border-3 border-[#2c694e] p-6 shadow-xl text-center space-y-5">
             <div className="bg-[#f3f9f5] p-5 rounded-3xl border border-[#2c694e]/30 space-y-2">
               <span className="text-xs font-black text-[#2c694e] uppercase tracking-wider block">
-                🟢 YOUR TURN
+                YOUR TURN
               </span>
 
               {/* Dominant Turn Number */}
@@ -162,18 +162,18 @@ export const LiveQueuePage: React.FC<LiveQueuePageProps> = ({ onNavigate }) => {
               </div>
 
               <div className="text-sm font-black text-[#012d1d]">
-                👥 {Math.max(0, activeToken.queuePosition - 1)} farmers ahead of you
+                {Math.max(0, activeToken.queuePosition - 1)} farmers ahead of you
               </div>
 
               <div className="text-xs font-black text-[#2c694e] bg-white px-3.5 py-1.5 rounded-full border border-[#2c694e]/20 inline-block shadow-2xs">
-                ⏱️ Expected wait: ~{activeToken.estimatedWaitMinutes} min
+                Expected wait: ~{activeToken.estimatedWaitMinutes} min
               </div>
             </div>
 
             {/* Dynamic Queue Status Banner */}
             <div className="bg-[#f3f4f1] p-3 rounded-2xl border border-[#c1c8c2]/50 text-xs font-extrabold text-[#012d1d] flex items-center justify-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-[#2c694e] animate-pulse"></span>
-              <span>🟢 Queue is moving smoothly ({centre?.activeCounters || 2} weighbridges active)</span>
+              <span>Queue is moving smoothly ({centre?.activeCounters || 2} weighbridges active)</span>
             </div>
 
             {/* Live Queue Sequence */}
@@ -208,7 +208,7 @@ export const LiveQueuePage: React.FC<LiveQueuePageProps> = ({ onNavigate }) => {
                 className="h-[48px] bg-[#f3f4f1] hover:bg-[#e8e8e5] text-[#012d1d] font-extrabold text-xs px-4 rounded-2xl border border-[#c1c8c2]/60 flex items-center justify-center gap-1.5 cursor-pointer transition-colors"
               >
                 <Navigation className="w-4 h-4 text-[#2c694e]" />
-                <span>📍 Get Directions</span>
+                <span>Get Directions</span>
               </button>
 
               <button
@@ -218,7 +218,7 @@ export const LiveQueuePage: React.FC<LiveQueuePageProps> = ({ onNavigate }) => {
                 className="h-[48px] bg-[#e9c46a] hover:bg-[#dfb552] text-[#002114] font-extrabold text-xs px-4 rounded-2xl flex items-center justify-center gap-1.5 cursor-pointer transition-all active:scale-95 disabled:opacity-50 shadow-2xs"
               >
                 <RefreshCw className={`w-4 h-4 ${isSimulating ? 'animate-spin' : ''}`} />
-                <span>🔄 Refresh Status</span>
+                <span>Refresh Status</span>
               </button>
             </div>
           </div>

@@ -75,7 +75,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ onNavigate }) =>
         <div>
           <div className="flex items-center gap-2">
             <span className="text-[10px] uppercase font-bold tracking-wider bg-[#012d1d] text-[#c1ecd4] px-2.5 py-0.5 rounded-md">
-              Govt. of {stateName} / Administration
+              {stateName} Administration
             </span>
             <span className="text-xs text-[#717973]">{districtName} District HQ</span>
           </div>

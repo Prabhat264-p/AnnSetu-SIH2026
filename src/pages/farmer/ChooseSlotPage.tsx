@@ -71,7 +71,7 @@ export const ChooseSlotPage: React.FC<ChooseSlotPageProps> = ({
           onClick={() => onNavigate('/farmer/centres')}
           className="mt-4 bg-[#1b4332] text-white px-5 py-2.5 rounded-xl text-xs font-bold cursor-pointer"
         >
-          📍 Find Procurement Centre
+          Find Procurement Centre
         </button>
       </div>
     );
@@ -225,7 +225,7 @@ export const ChooseSlotPage: React.FC<ChooseSlotPageProps> = ({
                   ✓ Centre Selected
                 </span>
               </div>
-              <p className="text-xs text-[#717973] font-medium">{selectedCentre.address} • 📍 {selectedCentre.distanceKm} km away</p>
+              <p className="text-xs text-[#717973] font-medium">{selectedCentre.address} • {selectedCentre.distanceKm} km away</p>
             </div>
           </div>
 
@@ -336,7 +336,7 @@ export const ChooseSlotPage: React.FC<ChooseSlotPageProps> = ({
         <div className="bg-white p-6 sm:p-8 rounded-3xl border border-[#c1c8c2]/60 shadow-md space-y-6 animate-in fade-in">
           <div className="text-center space-y-1">
             <h3 className="text-lg sm:text-xl font-black text-[#012d1d]">
-              📅 Choose your time slot
+              Choose your time slot
             </h3>
             <p className="text-xs text-[#717973] font-medium">
               {selectedCentre.name} • {quantity} Qtl {selectedCrop}
@@ -375,7 +375,7 @@ export const ChooseSlotPage: React.FC<ChooseSlotPageProps> = ({
                 className="py-2.5 px-3 rounded-2xl text-xs font-black text-[#2c694e] bg-[#f3f9f5] border border-[#2c694e]/40 hover:bg-[#e8f5ed] transition-all flex items-center justify-center gap-1.5 cursor-pointer shadow-2xs"
               >
                 <Calendar className="w-4 h-4 shrink-0" />
-                <span>📅 Choose another date</span>
+                <span>Choose another date</span>
               </button>
             </div>
           </div>
@@ -435,7 +435,7 @@ export const ChooseSlotPage: React.FC<ChooseSlotPageProps> = ({
 
                     <div className="w-full text-center">
                       <span className={`text-[10px] font-black px-2 py-0.5 rounded-md inline-block ${ts.color}`}>
-                        {ts.status === 'Available' ? '🟢 Available' : ts.status === 'Few slots' ? '🟡 Few slots' : '🔴 Full'}
+                        {ts.status === 'Available' ? 'Available' : ts.status === 'Few slots' ? 'Few slots' : 'Full'}
                       </span>
                     </div>
                   </button>
@@ -481,23 +481,23 @@ export const ChooseSlotPage: React.FC<ChooseSlotPageProps> = ({
 
           <div className="bg-white/10 p-5 rounded-2xl border border-white/15 space-y-3 text-xs">
             <div className="flex justify-between border-b border-white/10 pb-2">
-              <span className="text-[#aeeecb] font-bold">🌾 Crop Commodity:</span>
+              <span className="text-[#aeeecb] font-bold">Crop Commodity:</span>
               <span className="font-extrabold text-white">{selectedCrop}</span>
             </div>
             <div className="flex justify-between border-b border-white/10 pb-2">
-              <span className="text-[#aeeecb] font-bold">⚖️ Yield Quantity:</span>
+              <span className="text-[#aeeecb] font-bold">Yield Quantity:</span>
               <span className="font-extrabold text-[#e9c46a] text-sm">{quantity} Quintals</span>
             </div>
             <div className="flex justify-between border-b border-white/10 pb-2">
-              <span className="text-[#aeeecb] font-bold">📍 Procurement Centre:</span>
+              <span className="text-[#aeeecb] font-bold">Procurement Centre:</span>
               <span className="font-extrabold text-white">{selectedCentre.name}</span>
             </div>
             <div className="flex justify-between border-b border-white/10 pb-2">
-              <span className="text-[#aeeecb] font-bold">📅 Scheduled Date:</span>
+              <span className="text-[#aeeecb] font-bold">Scheduled Date:</span>
               <span className="font-extrabold text-white">{formatFormattedDate(selectedDate)}</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-[#aeeecb] font-bold">🕙 Time Slot:</span>
+              <span className="text-[#aeeecb] font-bold">Time Slot:</span>
               <span className="font-extrabold text-white">{selectedTimeSlot}</span>
             </div>
           </div>
@@ -518,7 +518,7 @@ export const ChooseSlotPage: React.FC<ChooseSlotPageProps> = ({
               className="w-full sm:flex-1 h-[52px] bg-[#e9c46a] hover:bg-[#dfb552] disabled:opacity-75 text-[#002114] font-black text-xs sm:text-sm rounded-2xl flex items-center justify-center gap-2 transition-all shadow-md active:scale-98 cursor-pointer"
             >
               {isSubmitting ? (
-                <span>Generating Official Token...</span>
+                <span>Generating Token...</span>
               ) : (
                 <>
                   <span>✓ Confirm My Turn</span>
@@ -538,7 +538,7 @@ export const ChooseSlotPage: React.FC<ChooseSlotPageProps> = ({
             <div className="flex items-center justify-between border-b border-[#eeeeeb] pb-3">
               <div className="flex items-center gap-2">
                 <Calendar className="w-5 h-5 text-[#2c694e]" />
-                <h3 className="font-black text-base text-[#012d1d]">📅 Select Date</h3>
+                <h3 className="font-black text-base text-[#012d1d]">Select Date</h3>
               </div>
               <button
                 type="button"
@@ -617,7 +617,7 @@ export const ChooseSlotPage: React.FC<ChooseSlotPageProps> = ({
                   >
                     <span>{item.day}</span>
                     <span className="text-[8px] leading-none">
-                      {isClosed ? 'Closed' : isFull ? '🔴' : isSelected ? '✓' : '🟢'}
+                      {isClosed ? 'Closed' : isFull ? 'Full' : isSelected ? '✓' : 'Open'}
                     </span>
                   </button>
                 );
@@ -648,7 +648,7 @@ export const ChooseSlotPage: React.FC<ChooseSlotPageProps> = ({
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-in fade-in">
           <div className="bg-white rounded-3xl p-6 max-w-sm w-full shadow-2xl space-y-4 text-center relative border border-[#c1c8c2]/60">
             <div className="w-12 h-12 rounded-2xl bg-amber-100 text-amber-900 flex items-center justify-center mx-auto text-xl font-bold">
-              🏢
+              <Building2 className="w-6 h-6 text-amber-900" />
             </div>
 
             <div>

@@ -35,10 +35,10 @@ export const FarmerDashboard: React.FC<FarmerDashboardProps> = ({
           <div>
             <div className="inline-flex items-center gap-1.5 bg-[#aeeecb] text-[#002114] px-3 py-1 rounded-full text-xs font-bold mb-2 shadow-xs">
               <Sparkles className="w-3.5 h-3.5 text-[#2c694e]" />
-              <span>Govt APMC Procurement Platform</span>
+              <span>AnnSetu APMC Procurement Platform</span>
             </div>
             <h1 className="text-2xl sm:text-3xl font-black tracking-tight">
-              Namaste, {currentUser?.name || 'Farmer'}! 👋
+              Namaste, {currentUser?.name || 'Farmer'}!
             </h1>
             <p className="text-xs sm:text-sm text-[#c1ecd4] mt-1 font-medium max-w-lg">
               {t('heroSubtitle')}
@@ -68,26 +68,26 @@ export const FarmerDashboard: React.FC<FarmerDashboardProps> = ({
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-xs font-bold text-[#717973]">
                 <span className="bg-[#c1ecd4] text-[#002114] font-black px-2.5 py-0.5 rounded">
-                  🌾 {activeToken.crop}
+                  {activeToken.crop}
                 </span>
                 <span className="font-extrabold text-[#012d1d]">{activeToken.quantityQuintals} Quintals</span>
               </div>
 
               <h3 className="text-lg sm:text-xl font-black text-[#012d1d]">
-                📍 {activeToken.centreName}
+                {activeToken.centreName}
               </h3>
 
               <p className="text-xs font-bold text-[#414844] flex items-center gap-3">
-                <span>📅 {activeToken.date}</span>
+                <span>{activeToken.date}</span>
                 <span>•</span>
-                <span>🕙 {activeToken.timeSlot}</span>
+                <span>{activeToken.timeSlot}</span>
               </p>
             </div>
 
             {/* Right side Live Turn Callout */}
             <div className="bg-[#f3f9f5] p-4 rounded-2xl border border-[#2c694e]/30 text-center space-y-2">
               <div className="text-xs font-black text-[#2c694e] uppercase tracking-wider">
-                🟢 YOUR TURN: #{activeToken.queuePosition}
+                YOUR TURN: #{activeToken.queuePosition}
               </div>
 
               <p className="text-sm font-bold text-[#012d1d]">
@@ -116,7 +116,7 @@ export const FarmerDashboard: React.FC<FarmerDashboardProps> = ({
 
           <div>
             <h3 className="text-xl font-black text-[#012d1d]">
-              📍 Find a Procurement Centre
+              Find a Procurement Centre
             </h3>
             <p className="text-xs sm:text-sm text-[#717973] font-medium max-w-md mx-auto mt-1">
               Select a nearby APMC procurement centre to schedule your crop turn and receive your digital token.
@@ -127,7 +127,7 @@ export const FarmerDashboard: React.FC<FarmerDashboardProps> = ({
             onClick={() => onNavigate('/farmer/centres')}
             className="bg-[#1b4332] hover:bg-[#012d1d] text-white font-black text-xs sm:text-sm px-7 py-3.5 rounded-2xl shadow-lg cursor-pointer transition-all active:scale-98 inline-flex items-center gap-2"
           >
-            <span>📍 Find a Procurement Centre</span>
+            <span>Find a Procurement Centre</span>
             <ArrowRight className="w-4 h-4 text-[#aeeecb]" />
           </button>
         </div>
@@ -145,7 +145,7 @@ export const FarmerDashboard: React.FC<FarmerDashboardProps> = ({
                 LAST VISIT • COMPLETED
               </span>
               <h4 className="font-extrabold text-sm text-[#012d1d]">
-                🌾 {completedToken.crop} ({completedToken.quantityQuintals} Qtl) • {completedToken.centreName}
+                {completedToken.crop} ({completedToken.quantityQuintals} Qtl) • {completedToken.centreName}
               </h4>
               <p className="text-xs text-[#717973]">Completed on {completedToken.date}</p>
             </div>
@@ -160,13 +160,13 @@ export const FarmerDashboard: React.FC<FarmerDashboardProps> = ({
         </div>
       )}
 
-      {/* 4. GOVT MSP PROCUREMENT RATES REFERENCE GRID */}
+      {/* 4. MSP PROCUREMENT RATES REFERENCE GRID */}
       <div className="bg-[#f3f4f1] p-5 rounded-3xl border border-[#c1c8c2]/60 space-y-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <TrendingUp className="w-4 h-4 text-[#2c694e]" />
             <h3 className="font-extrabold text-xs text-[#012d1d] uppercase tracking-wider">
-              Govt MSP Procurement Rates (2025-26)
+              MSP Procurement Rates (2025-26)
             </h3>
           </div>
           <span className="text-[11px] text-[#717973] font-bold">Direct DBT Bank Payout</span>

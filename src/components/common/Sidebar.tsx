@@ -31,10 +31,10 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentPath, onNavigate }) => 
     if (currentUser.role === 'FARMER') {
       return [
         { label: 'Dashboard', path: '/farmer/dashboard', icon: LayoutDashboard },
-        { label: `📍 ${t('findProcurementCentre')}`, path: '/farmer/centres', icon: Search },
-        { label: `🎟️ ${t('myTurn')}`, path: '/farmer/live-queue', icon: Ticket },
-        { label: `📋 ${t('myBookings')}`, path: '/farmer/my-bookings', icon: History },
-        { label: `👤 ${t('profile')}`, path: '/farmer/profile', icon: User },
+        { label: t('findProcurementCentre'), path: '/farmer/centres', icon: Search },
+        { label: t('myTurn'), path: '/farmer/live-queue', icon: Ticket },
+        { label: t('myBookings'), path: '/farmer/my-bookings', icon: History },
+        { label: t('profile'), path: '/farmer/profile', icon: User },
       ];
     }
 

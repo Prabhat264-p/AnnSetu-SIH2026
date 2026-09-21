@@ -61,7 +61,7 @@ export const CentreDetailsPage: React.FC<CentreDetailsPageProps> = ({
         </button>
 
         <span className="text-xs font-extrabold text-[#012d1d] bg-[#f3f4f1] px-3 py-1 rounded-xl border border-[#c1c8c2]/50">
-          🏢 Centre Details
+          Centre Details
         </span>
       </div>
 
@@ -88,7 +88,7 @@ export const CentreDetailsPage: React.FC<CentreDetailsPageProps> = ({
                     : 'bg-amber-300 text-amber-950'
                 }`}
               >
-                {centre.source === 'OFFICIAL_GOVT' ? '✓ Verified APMC Data' : 'ℹ️ Simulated Demo Centre'}
+                {centre.source === 'OFFICIAL_GOVT' ? '✓ Verified APMC Data' : 'Simulated Demo Centre'}
               </span>
             </div>
 
@@ -98,7 +98,7 @@ export const CentreDetailsPage: React.FC<CentreDetailsPageProps> = ({
             
             <p className="text-xs text-[#c1ecd4] flex items-center gap-1.5 mt-1 font-bold">
               <MapPin className="w-4 h-4 shrink-0 text-[#aeeecb]" />
-              <span>{centre.address} • 📍 {centre.distanceKm} km away</span>
+              <span>{centre.address} • {centre.distanceKm} km away</span>
             </p>
           </div>
         </div>
@@ -115,7 +115,7 @@ export const CentreDetailsPage: React.FC<CentreDetailsPageProps> = ({
                   : 'bg-red-100 text-red-800'
               }`}
             >
-              🟢 OPEN NOW ({centre.workingHours})
+              OPEN NOW ({centre.workingHours})
             </span>
           </div>
 
@@ -125,7 +125,7 @@ export const CentreDetailsPage: React.FC<CentreDetailsPageProps> = ({
         {/* 3. TODAY'S STATUS Metrics Grid */}
         <div className="p-5 sm:p-6 bg-[#f9faf6] border-b border-[#eeeeeb] space-y-3">
           <h3 className="text-xs font-black uppercase tracking-wider text-[#012d1d]">
-            📊 TODAY'S STATUS
+            TODAY'S STATUS
           </h3>
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -171,7 +171,7 @@ export const CentreDetailsPage: React.FC<CentreDetailsPageProps> = ({
           <div className="space-y-5">
             {/* Supported Crops */}
             <div className="space-y-2">
-              <h3 className="font-black text-sm text-[#012d1d]">🌾 Supported Commodities</h3>
+              <h3 className="font-black text-sm text-[#012d1d]">Supported Commodities</h3>
               <div className="flex flex-wrap gap-2">
                 {centre.supportedCrops.map((crop) => (
                   <span
@@ -187,7 +187,7 @@ export const CentreDetailsPage: React.FC<CentreDetailsPageProps> = ({
 
             {/* Working Hours */}
             <div className="space-y-2">
-              <h3 className="font-black text-sm text-[#012d1d]">🕐 Working Hours</h3>
+              <h3 className="font-black text-sm text-[#012d1d]">Working Hours</h3>
               <div className="bg-[#f9faf6] p-3.5 rounded-2xl border border-[#c1c8c2]/40 text-xs space-y-1">
                 <div className="flex justify-between font-bold text-[#012d1d]">
                   <span>Monday – Saturday:</span>
@@ -202,25 +202,25 @@ export const CentreDetailsPage: React.FC<CentreDetailsPageProps> = ({
 
             {/* Centre Facilities */}
             <div className="space-y-2">
-              <h3 className="font-black text-sm text-[#012d1d]">🏢 Centre Facilities</h3>
+              <h3 className="font-black text-sm text-[#012d1d]">Centre Facilities</h3>
               <div className="grid grid-cols-2 gap-2 text-xs font-bold text-[#012d1d]">
                 <div className="bg-[#f9faf6] p-2.5 rounded-xl border border-[#c1c8c2]/40 flex items-center gap-2">
-                  <span>⚖️ 50 MT Electronic Scale</span>
+                  <span>50 MT Electronic Scale</span>
                 </div>
                 <div className="bg-[#f9faf6] p-2.5 rounded-xl border border-[#c1c8c2]/40 flex items-center gap-2">
-                  <span>🌾 Moisture Testing Lab</span>
+                  <span>Moisture Testing Lab</span>
                 </div>
                 <div className="bg-[#f9faf6] p-2.5 rounded-xl border border-[#c1c8c2]/40 flex items-center gap-2">
-                  <span>💧 Drinking Water</span>
+                  <span>Drinking Water</span>
                 </div>
                 <div className="bg-[#f9faf6] p-2.5 rounded-xl border border-[#c1c8c2]/40 flex items-center gap-2">
-                  <span>🚻 Farmers Restroom</span>
+                  <span>Farmers Restroom</span>
                 </div>
                 <div className="bg-[#f9faf6] p-2.5 rounded-xl border border-[#c1c8c2]/40 flex items-center gap-2">
-                  <span>🅿️ Covered Vehicle Yard</span>
+                  <span>Covered Vehicle Yard</span>
                 </div>
                 <div className="bg-[#f9faf6] p-2.5 rounded-xl border border-[#c1c8c2]/40 flex items-center gap-2">
-                  <span>📞 24x7 Help Desk</span>
+                  <span>24x7 Help Desk</span>
                 </div>
               </div>
             </div>
@@ -230,8 +230,8 @@ export const CentreDetailsPage: React.FC<CentreDetailsPageProps> = ({
           <div className="space-y-5 flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between mb-2">
-                <h3 className="font-black text-sm text-[#012d1d]">📍 Location & Map</h3>
-                <span className="text-xs text-[#2c694e] font-extrabold">📍 {centre.distanceKm} km away</span>
+                <h3 className="font-black text-sm text-[#012d1d]">Location & Map</h3>
+                <span className="text-xs text-[#2c694e] font-extrabold">{centre.distanceKm} km away</span>
               </div>
 
               {/* Map Thumbnail */}
@@ -253,7 +253,7 @@ export const CentreDetailsPage: React.FC<CentreDetailsPageProps> = ({
                 className="w-full mt-2 bg-[#f3f4f1] hover:bg-[#e8e8e5] text-[#012d1d] font-bold text-xs py-2.5 px-4 rounded-xl border border-[#c1c8c2]/60 flex items-center justify-center gap-1.5 cursor-pointer"
               >
                 <Navigation className="w-4 h-4 text-[#2c694e]" />
-                <span>📍 Get Directions</span>
+                <span>Get Directions</span>
               </button>
             </div>
 
@@ -264,7 +264,7 @@ export const CentreDetailsPage: React.FC<CentreDetailsPageProps> = ({
                 disabled={centre.status === 'CLOSED'}
                 className="w-full min-h-[52px] bg-[#1b4332] hover:bg-[#012d1d] disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-black text-sm py-3.5 px-6 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-xl active:scale-98 cursor-pointer"
               >
-                <span>📅 {t('bookYourTurn')}</span>
+                <span>{t('bookYourTurn')}</span>
                 <ArrowRight className="w-5 h-5 text-[#aeeecb]" />
               </button>
               <p className="text-center text-[11px] text-[#717973] font-medium">

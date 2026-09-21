@@ -546,7 +546,7 @@ export const RoleLoginPage: React.FC<RoleLoginPageProps> = ({
             </div>
 
             <h1 className="text-2xl font-black text-[#012d1d] tracking-tight">
-              {role === 'FARMER' ? '👨🌾 Farmer Login' : role === 'OPERATOR' ? '🏢 Procurement Centre Login' : '🏛️ District Admin Login'}
+              {role === 'FARMER' ? 'Farmer Login' : role === 'OPERATOR' ? 'Procurement Centre Login' : 'District Admin Login'}
             </h1>
 
             <p className="text-xs text-[#717973] font-medium max-w-xs mx-auto">
@@ -839,7 +839,7 @@ export const RoleLoginPage: React.FC<RoleLoginPageProps> = ({
           <div className="bg-white rounded-3xl p-6 max-w-md w-full shadow-2xl space-y-4 relative border border-[#c1c8c2]/60">
             <div className="flex items-center justify-between border-b border-[#eeeeeb] pb-3">
               <h3 className="font-black text-base text-[#012d1d]">
-                👨🌾 Create Farmer Account
+                Create Farmer Account
               </h3>
               <button onClick={() => setShowRegModal(false)} className="text-gray-400 hover:text-gray-600 cursor-pointer">
                 <X className="w-5 h-5" />
@@ -972,7 +972,7 @@ export const RoleLoginPage: React.FC<RoleLoginPageProps> = ({
             {/* Header */}
             <div className="flex items-center justify-between border-b border-[#eeeeeb] pb-3">
               <div>
-                <h3 className="font-black text-base text-[#012d1d]">🏢 Register Centre & Operator Account</h3>
+                <h3 className="font-black text-base text-[#012d1d]">Register Centre & Operator Account</h3>
                 <p className="text-[11px] text-[#717973] font-medium">Step {opRegStep} of 4 — Complete your centre setup</p>
               </div>
               <button onClick={() => setShowOpRegModal(false)} className="text-gray-400 hover:text-gray-600 cursor-pointer">
@@ -1357,7 +1357,7 @@ export const RoleLoginPage: React.FC<RoleLoginPageProps> = ({
             {/* Header */}
             <div className="flex items-center justify-between border-b border-[#eeeeeb] pb-3">
               <div>
-                <h3 className="font-black text-base text-[#012d1d]">🏛️ District Admin First-Time Registration</h3>
+                <h3 className="font-black text-base text-[#012d1d]">District Admin First-Time Registration</h3>
                 <p className="text-[11px] text-[#717973] font-medium">Step {adminRegStep} of 4 — Official District Jurisdiction & Administration</p>
               </div>
               <button onClick={() => setShowAdminRegModal(false)} className="text-gray-400 hover:text-gray-600 cursor-pointer">
@@ -1629,7 +1629,7 @@ export const RoleLoginPage: React.FC<RoleLoginPageProps> = ({
                       <div><span className="font-bold">Generated Admin ID:</span> <span className="font-mono font-bold text-[#b78103]">{previewAdminId}</span></div>
                       <div><span className="font-bold">Officer Name:</span> {adminRegFullName} ({adminRegDesignation})</div>
                       <div><span className="font-bold">Department:</span> {adminRegDepartment}</div>
-                      <div><span className="font-bold">Jurisdiction:</span> {adminRegDistrict} District, Government of {adminRegState}</div>
+                      <div><span className="font-bold">Jurisdiction:</span> {adminRegDistrict} District, {adminRegState} Administration</div>
                       <div><span className="font-bold">Mobile:</span> +91 {adminRegMobile}</div>
                     </div>
 
@@ -1721,7 +1721,7 @@ export const RoleLoginPage: React.FC<RoleLoginPageProps> = ({
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-in fade-in">
           <div className="bg-white rounded-3xl p-6 max-w-sm w-full shadow-2xl space-y-4 text-center relative border border-[#c1c8c2]/60">
             <div className="w-12 h-12 rounded-2xl bg-[#c1ecd4] text-[#002114] flex items-center justify-center mx-auto text-xl font-bold">
-              📞
+              <Phone className="w-5 h-5 text-[#002114]" />
             </div>
 
             <div>

@@ -13,22 +13,22 @@ export const UniversalCropSelector: React.FC<UniversalCropSelectorProps> = ({
   const { t } = useApp();
 
   const crops = [
-    { name: 'Wheat', label: '🌾 Wheat', icon: '🌾' },
-    { name: 'Paddy', label: '🌾 Paddy / Rice', icon: '🌾' },
-    { name: 'Maize', label: '🌽 Maize / Corn', icon: '🌽' },
-    { name: 'Soybean', label: '🌱 Soybean', icon: '🌱' },
-    { name: 'Cotton', label: '☁️ Cotton', icon: '☁️' },
-    { name: 'Other', label: '🌱 Other Crop', icon: '🌱' },
+    { name: 'Wheat', label: 'Wheat', icon: '' },
+    { name: 'Paddy', label: 'Paddy / Rice', icon: '' },
+    { name: 'Maize', label: 'Maize / Corn', icon: '' },
+    { name: 'Soybean', label: 'Soybean', icon: '' },
+    { name: 'Cotton', label: 'Cotton', icon: '' },
+    { name: 'Other', label: 'Other Crop', icon: '' },
   ];
 
   return (
     <div className="space-y-4">
       <div className="text-center space-y-1">
         <h3 className="text-lg sm:text-xl font-black text-[#012d1d]">
-          🌾 {t('whatCrop')}
+          {t('whatCrop')}
         </h3>
         <p className="text-xs text-[#717973] font-medium">
-          Select the agricultural crop you are bringing for government procurement.
+          Select the agricultural crop you are bringing for procurement.
         </p>
       </div>
 

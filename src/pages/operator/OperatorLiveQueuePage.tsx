@@ -148,7 +148,7 @@ export const OperatorLiveQueuePage: React.FC<OperatorLiveQueuePageProps> = ({
         {/* Table Toolbar */}
         <div className="p-4 md:p-5 border-b border-[#eeeeeb] flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-[#f9faf6]">
           <div className="flex items-center gap-2">
-            <h3 className="font-bold text-base text-[#012d1d]">🔴 Real-Time Queue Ledger</h3>
+            <h3 className="font-bold text-base text-[#012d1d]">Real-Time Queue Ledger</h3>
             <span className="text-xs font-bold bg-[#c1ecd4] text-[#002114] px-2.5 py-0.5 rounded-md">
               {filteredTokens.length} Farmers
             </span>

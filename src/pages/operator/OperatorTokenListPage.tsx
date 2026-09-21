@@ -98,7 +98,7 @@ export const OperatorTokenListPage: React.FC<OperatorTokenListPageProps> = ({
             onChange={(e) => setSelectedCrop(e.target.value)}
             className="bg-[#f3f4f1] text-[#012d1d] font-bold text-xs px-3 py-2 rounded-xl border border-[#c1c8c2]/60 outline-none cursor-pointer"
           >
-            <option value="ALL">🌾 All Crops</option>
+            <option value="ALL">All Crops</option>
             <option value="Wheat">Wheat (गेहूं)</option>
             <option value="Soybean">Soybean (सोयाबीन)</option>
             <option value="Paddy">Paddy (धान)</option>
@@ -111,7 +111,7 @@ export const OperatorTokenListPage: React.FC<OperatorTokenListPageProps> = ({
             onChange={(e) => setSelectedStatus(e.target.value)}
             className="bg-[#f3f4f1] text-[#012d1d] font-bold text-xs px-3 py-2 rounded-xl border border-[#c1c8c2]/60 outline-none cursor-pointer"
           >
-            <option value="ALL">🏷️ All Statuses</option>
+            <option value="ALL">All Statuses</option>
             <option value="CONFIRMED">CONFIRMED</option>
             <option value="VERIFIED">VERIFIED</option>
             <option value="PROCESSING">PROCESSING</option>

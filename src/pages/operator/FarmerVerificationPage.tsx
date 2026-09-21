@@ -134,7 +134,7 @@ export const FarmerVerificationPage: React.FC<FarmerVerificationPageProps> = ({
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-black text-[#012d1d] tracking-tight">
-            🛡️ Farmer Verification & Weighbridge Intake
+            Farmer Verification & Weighbridge Intake
           </h1>
           <p className="text-xs text-[#717973] mt-0.5">
             Single token verification workflow for {centre.name}
