@@ -25,6 +25,7 @@ import { useApp } from '../../context/AppContext';
 import { apiService } from '../../services/api/apiService';
 import { Language, UserRole } from '../../types';
 import { ResetDemoButton } from '../../components/common/ResetDemoButton';
+import { LanguageSelector } from '../../components/common/LanguageSelector';
 import {
   INDIA_STATES,
   INDIA_UNION_TERRITORIES,
@@ -517,33 +518,7 @@ export const RoleLoginPage: React.FC<RoleLoginPageProps> = ({
 
         <div className="flex items-center gap-3">
           <ResetDemoButton />
-
-          <div className="flex items-center gap-1.5">
-            <Globe className="w-4 h-4 text-[#2c694e] shrink-0" />
-            <div className="flex items-center bg-[#f3f4f1] p-1 rounded-xl border border-[#c1c8c2]/60 text-xs font-bold">
-              {(['en', 'hi', 'mr', 'bn', 'te'] as Language[]).map((lang) => (
-                <button
-                  key={lang}
-                  onClick={() => setLanguage(lang)}
-                  className={`px-2 py-1 rounded-lg transition-all cursor-pointer ${
-                    language === lang
-                      ? 'bg-white text-[#012d1d] shadow-2xs font-extrabold'
-                      : 'text-[#717973] hover:text-[#012d1d]'
-                  }`}
-                >
-                  {lang === 'en'
-                    ? 'English'
-                    : lang === 'hi'
-                    ? 'हिन्दी'
-                    : lang === 'mr'
-                    ? 'मराठी'
-                    : lang === 'bn'
-                    ? 'বাংলা'
-                    : 'తెలుగు'}
-                </button>
-              ))}
-            </div>
-          </div>
+          <LanguageSelector variant="pills" />
         </div>
       </header>
 
