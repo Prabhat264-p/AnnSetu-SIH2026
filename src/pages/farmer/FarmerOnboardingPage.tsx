@@ -162,7 +162,7 @@ export const FarmerOnboardingPage: React.FC<FarmerOnboardingPageProps> = ({ onCo
   };
 
   return (
-    <div className="min-h-screen bg-[#f7f8f5] flex items-center justify-center p-4 py-12 font-sans select-none">
+    <div className="min-h-[100dvh] min-h-screen w-full bg-[#f7f8f5] flex items-center justify-center p-4 py-8 sm:py-12 font-sans select-none overflow-y-auto overflow-x-hidden">
       <div className="bg-white max-w-xl w-full rounded-3xl border border-[#c1c8c2]/60 shadow-lg p-6 md:p-8 space-y-6">
         {/* Header */}
         <div className="text-center space-y-2">

@@ -505,9 +505,9 @@ export const RoleLoginPage: React.FC<RoleLoginPageProps> = ({
 
 
   return (
-    <div className="h-[100dvh] max-h-[100dvh] w-full overflow-hidden bg-[#f9faf6] text-[#1a1c1a] flex flex-col justify-between select-none font-sans p-3 sm:p-5 md:p-6">
+    <div className="min-h-[100dvh] min-h-screen w-full overflow-y-auto overflow-x-hidden bg-[#f9faf6] text-[#1a1c1a] flex flex-col justify-between select-none font-sans p-3 sm:p-5 md:p-6">
       {/* Top Navigation Bar */}
-      <header className="h-[60px] shrink-0 flex items-center justify-between border-b border-[#c1c8c2]/40 pb-2">
+      <header className="min-h-[60px] shrink-0 flex flex-wrap items-center justify-between gap-3 border-b border-[#c1c8c2]/40 pb-2">
         <button
           onClick={onChangeRole}
           className="flex items-center gap-2 text-xs font-black text-[#012d1d] hover:text-[#2c694e] bg-white px-3.5 py-2 rounded-xl border border-[#c1c8c2]/60 shadow-2xs transition-colors cursor-pointer"
@@ -522,8 +522,8 @@ export const RoleLoginPage: React.FC<RoleLoginPageProps> = ({
         </div>
       </header>
 
-      {/* Main Authentication Card Canvas (Zero Scroll Viewport Height) */}
-      <main className="max-w-md w-full mx-auto my-auto px-4 py-2 flex-1 flex flex-col justify-center">
+      {/* Main Authentication Card Canvas */}
+      <main className="max-w-md w-full mx-auto my-auto px-2 sm:px-4 py-4 flex-1 flex flex-col justify-center">
         <div className="bg-white rounded-3xl border border-[#c1c8c2]/60 p-6 md:p-7 shadow-xl space-y-5">
           {/* Header Badge & Title */}
           <div className="text-center space-y-1.5">
@@ -828,7 +828,7 @@ export const RoleLoginPage: React.FC<RoleLoginPageProps> = ({
       </main>
 
       {/* Footer Bar */}
-      <footer className="h-[36px] shrink-0 pt-2 border-t border-[#c1c8c2]/40 flex items-center justify-between text-[10px] sm:text-xs text-[#717973]">
+      <footer className="min-h-[36px] shrink-0 py-3 mt-auto border-t border-[#c1c8c2]/40 flex flex-wrap items-center justify-between gap-2 text-[10px] sm:text-xs text-[#717973]">
         <span>AnnSetu Smart Procurement Scheduling</span>
         <span>Helpline: 1800-180-1551</span>
       </footer>

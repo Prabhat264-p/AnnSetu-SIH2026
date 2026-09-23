@@ -303,7 +303,7 @@ const MainLayout: React.FC = () => {
   // If on public Auth/Role selection screen, render fullscreen view without layout shell
   if (isAuthView && !isAuthenticated) {
     return (
-      <div className="h-[100dvh] max-h-[100dvh] w-full overflow-hidden bg-[#f9faf6] text-[#1a1c1a] font-sans selection:bg-[#c1ecd4] selection:text-[#002114] print:hidden">
+      <div className="min-h-[100dvh] min-h-screen w-full bg-[#f9faf6] text-[#1a1c1a] font-sans selection:bg-[#c1ecd4] selection:text-[#002114] print:hidden overflow-y-auto overflow-x-hidden">
         {renderCurrentView()}
       </div>
     );

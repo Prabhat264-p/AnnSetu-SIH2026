@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {
   Tractor,
+  User,
   Building2,
   Landmark,
   Globe,
@@ -45,7 +46,7 @@ export const RoleSelectionPage: React.FC<RoleSelectionPageProps> = ({ onSelectRo
       titleBn: 'কৃষক',
       titleTe: 'రైతు',
       subtitle: 'Book slots • Get digital tokens • Track queue',
-      icon: Tractor,
+      icon: User,
       capabilities: ['Book slots', 'Digital tokens', 'Track queue'],
       accentColor: '#1b4332',
       badgeBg: 'bg-[#c1ecd4] text-[#002114]',
@@ -113,9 +114,9 @@ export const RoleSelectionPage: React.FC<RoleSelectionPageProps> = ({ onSelectRo
   };
 
   return (
-    <div className="h-[100dvh] max-h-[100dvh] w-full overflow-hidden bg-[#f9faf6] text-[#1a1c1a] flex flex-col justify-between p-3 sm:p-5 md:p-6 select-none font-sans">
+    <div className="min-h-[100dvh] min-h-screen w-full bg-[#f9faf6] text-[#1a1c1a] flex flex-col justify-between p-3 sm:p-5 md:p-6 select-none font-sans overflow-x-hidden">
       {/* Top Header Bar (~76px height) */}
-      <header className="h-[76px] shrink-0 flex items-center justify-between border-b border-[#c1c8c2]/40 pb-2">
+      <header className="min-h-[64px] sm:min-h-[76px] shrink-0 flex flex-wrap items-center justify-between gap-3 border-b border-[#c1c8c2]/40 pb-2">
         <div className="flex items-center gap-3">
           <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#012d1d] text-[#c1ecd4] flex items-center justify-center font-bold shadow-xs">
             <Tractor className="w-5 h-5" />
@@ -137,8 +138,8 @@ export const RoleSelectionPage: React.FC<RoleSelectionPageProps> = ({ onSelectRo
         </div>
       </header>
 
-      {/* Main Center Canvas (Balanced Vertical Composition, Zero Scroll) */}
-      <main className="flex-1 flex flex-col items-center justify-center max-w-5xl mx-auto w-full px-3 py-2 my-auto">
+      {/* Main Center Canvas */}
+      <main className="flex-1 flex flex-col items-center justify-center max-w-5xl mx-auto w-full px-3 py-4 my-auto">
         {/* Welcome Section */}
         <div className="text-center space-y-0.5 mb-5 sm:mb-6">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#012d1d] tracking-tight leading-none mb-2">
@@ -150,8 +151,8 @@ export const RoleSelectionPage: React.FC<RoleSelectionPageProps> = ({ onSelectRo
           </p>
         </div>
 
-        {/* 3 Role Cards Grid (~195–208px equal height on desktop) */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 md:gap-5 w-full mb-6 max-w-4xl">
+        {/* 3 Role Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 md:gap-5 w-full mb-6 max-w-4xl">
           {roleCards.map((card) => {
             const Icon = card.icon;
             const isSelected = selectedRole === card.role;
@@ -161,7 +162,7 @@ export const RoleSelectionPage: React.FC<RoleSelectionPageProps> = ({ onSelectRo
               <div
                 key={card.role}
                 onClick={() => handleCardClick(card.role)}
-                className={`h-auto sm:h-[195px] md:h-[208px] rounded-2xl sm:rounded-3xl border-2 p-3.5 sm:p-4 transition-all cursor-pointer relative flex flex-col justify-between ${
+                className={`h-auto min-h-[180px] md:min-h-[208px] rounded-2xl sm:rounded-3xl border-2 p-3.5 sm:p-4 transition-all cursor-pointer relative flex flex-col justify-between ${
                   isSelected
                     ? 'border-[#2c694e] bg-white ring-3 ring-[#aeeecb]/50 shadow-lg scale-[1.01]'
                     : 'border-[#c1c8c2]/60 bg-white hover:border-[#1b4332] hover:shadow-xs'
@@ -224,7 +225,7 @@ export const RoleSelectionPage: React.FC<RoleSelectionPageProps> = ({ onSelectRo
             onClick={() => {
               if (selectedRole) onSelectRole(selectedRole);
             }}
-            className={`w-full h-[52px] font-extrabold text-xs sm:text-sm rounded-xl sm:rounded-2xl flex items-center justify-center gap-2 transition-all shadow-md ${
+            className={`w-full min-h-[52px] h-auto py-3 px-4 font-extrabold text-xs sm:text-sm rounded-xl sm:rounded-2xl flex items-center justify-center gap-2 transition-all shadow-md ${
               selectedRole === null
                 ? 'bg-[#e0e2de] text-[#717973] border border-[#c1c8c2]/50 cursor-not-allowed opacity-80'
                 : 'bg-[#012d1d] hover:bg-[#1b4332] text-white cursor-pointer shadow-lg active:scale-98'
@@ -239,8 +240,8 @@ export const RoleSelectionPage: React.FC<RoleSelectionPageProps> = ({ onSelectRo
         </div>
       </main>
 
-      {/* Footer (~36px height) */}
-      <footer className="h-[36px] shrink-0 pt-2 border-t border-[#c1c8c2]/40 flex items-center justify-between text-[10px] sm:text-xs text-[#717973]">
+      {/* Footer */}
+      <footer className="min-h-[36px] shrink-0 py-3 mt-auto border-t border-[#c1c8c2]/40 flex flex-wrap items-center justify-between gap-2 text-[10px] sm:text-xs text-[#717973]">
         <div className="flex items-center gap-1 font-semibold">
           <span className="text-[#012d1d] font-bold">AnnSetu Platform</span>
           <span>• Helpline: 1800-180-1551</span>
