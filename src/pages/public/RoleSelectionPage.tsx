@@ -115,26 +115,33 @@ export const RoleSelectionPage: React.FC<RoleSelectionPageProps> = ({ onSelectRo
 
   return (
     <div className="min-h-[100dvh] min-h-screen w-full bg-[#f9faf6] text-[#1a1c1a] flex flex-col justify-between p-3 sm:p-5 md:p-6 select-none font-sans overflow-x-hidden">
-      {/* Top Header Bar (~76px height) */}
-      <header className="min-h-[64px] sm:min-h-[76px] shrink-0 flex flex-wrap items-center justify-between gap-3 border-b border-[#c1c8c2]/40 pb-2">
-        <div className="flex items-center gap-3">
-          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#012d1d] text-[#c1ecd4] flex items-center justify-center font-bold shadow-xs">
-            <Tractor className="w-5 h-5" />
-          </div>
-          <div>
-            <div className="flex items-center gap-1.5 leading-none">
-              <span className="font-black text-xl sm:text-2xl text-[#012d1d] tracking-tight">AnnSetu</span>
+      {/* Top Header Bar */}
+      <header className="w-full shrink-0 border-b border-[#c1c8c2]/40 pb-3 mb-2">
+        {/* Row 1: AnnSetu Branding (Left) + Language Selector (Right) */}
+        <div className="flex items-center justify-between gap-2">
+          <div className="flex items-center gap-2.5 sm:gap-3 min-w-0">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#012d1d] text-[#c1ecd4] flex items-center justify-center font-bold shadow-xs shrink-0">
+              <Tractor className="w-5 h-5" />
             </div>
-            <p className="text-[10px] sm:text-[11px] text-[#414844] font-medium leading-none mt-1">
-              Smart Queue. Smart Farming. Stronger India.
-            </p>
+            <div className="min-w-0">
+              <div className="flex items-center gap-1.5 leading-none">
+                <span className="font-black text-xl sm:text-2xl text-[#012d1d] tracking-tight">AnnSetu</span>
+              </div>
+              <p className="text-[10px] sm:text-[11px] text-[#414844] font-medium leading-none mt-1 truncate">
+                Smart Queue. Smart Farming. Stronger India.
+              </p>
+            </div>
+          </div>
+
+          {/* Top-Right Language Selector */}
+          <div className="shrink-0">
+            <LanguageSelector variant="pills" />
           </div>
         </div>
 
-        {/* Top-Right Reset Demo + Language Selector */}
-        <div className="flex items-center gap-3">
+        {/* Row 2: Centered Reset Demo Button */}
+        <div className="flex justify-center mt-2.5">
           <ResetDemoButton />
-          <LanguageSelector variant="pills" />
         </div>
       </header>
 

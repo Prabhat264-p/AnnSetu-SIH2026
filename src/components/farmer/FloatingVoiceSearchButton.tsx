@@ -23,7 +23,7 @@ export const FloatingVoiceSearchButton: React.FC<FloatingVoiceSearchButtonProps>
   const tooltipText = tooltipMap[language] || 'Speak to Search';
 
   return (
-    <div className="fixed bottom-7 right-5 sm:right-7 z-40 animate-in slide-in-from-bottom duration-300 pointer-events-auto select-none group flex items-center gap-2">
+    <div className="fixed bottom-[calc(4.75rem+env(safe-area-inset-bottom,0px))] md:bottom-8 right-4 sm:right-7 z-50 animate-in slide-in-from-bottom duration-300 pointer-events-auto select-none group flex items-center gap-2">
       {/* Tooltip on Hover / Focus */}
       <div className="hidden sm:block opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-[#012d1d] text-white text-xs font-black px-3 py-1.5 rounded-xl border border-[#aeeecb]/40 shadow-lg whitespace-nowrap">
         {tooltipText}

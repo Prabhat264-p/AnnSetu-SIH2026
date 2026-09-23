@@ -175,25 +175,17 @@ export const FarmerProfilePage: React.FC = () => {
 
       {/* Header Profile Hero */}
       <div className="bg-white rounded-3xl border border-[#c1c8c2]/60 p-6 md:p-8 shadow-xs">
-        <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5">
-          <div className="w-24 h-24 rounded-3xl bg-[#c1ecd4] border-4 border-white shadow-md overflow-hidden shrink-0">
-            <img
-              src={currentUser.avatarUrl || 'https://images.unsplash.com/photo-1544717305-2782549b5136?w=300&auto=format&fit=crop&q=80'}
-              alt={currentUser.name}
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          <div className="space-y-1 text-center sm:text-left flex-1">
-            <div className="flex items-center justify-center sm:justify-start gap-2">
+        <div className="flex flex-col sm:flex-row items-center sm:items-start justify-between gap-5">
+          <div className="space-y-1.5 text-center sm:text-left flex-1 min-w-0">
+            <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2">
               <h1 className="text-2xl font-extrabold text-[#012d1d]">{farmerProfile.name || currentUser.name}</h1>
-              <span className="bg-[#aeeecb] text-[#002114] text-[10px] font-bold uppercase px-2 py-0.5 rounded-full flex items-center gap-1">
+              <span className="bg-[#aeeecb] text-[#002114] text-[10px] font-bold uppercase px-2 py-0.5 rounded-full flex items-center gap-1 shrink-0">
                 <CheckCircle2 className="w-3 h-3 text-[#2c694e]" /> Verified Farmer Profile
               </span>
             </div>
 
             <p className="text-xs text-[#414844] flex items-center justify-center sm:justify-start gap-1 font-semibold">
-              <MapPin className="w-4 h-4 text-[#2c694e]" />
+              <MapPin className="w-4 h-4 text-[#2c694e] shrink-0" />
               <span>
                 {farmerProfile.village}, {farmerProfile.block} Block, {farmerProfile.district}, {farmerProfile.state}
               </span>
@@ -214,16 +206,16 @@ export const FarmerProfilePage: React.FC = () => {
             </p>
           </div>
 
-          <div className="flex flex-col gap-2 shrink-0 text-center sm:text-right">
+          <div className="flex flex-col gap-2 shrink-0 text-center sm:text-right w-full sm:w-auto items-center sm:items-end">
             <button
               onClick={() => setIsEditingLocation(!isEditingLocation)}
-              className="px-4 py-2 bg-[#1b4332] hover:bg-[#2d5a45] text-white text-xs font-bold rounded-xl transition-all flex items-center gap-1.5 justify-center cursor-pointer shadow-xs"
+              className="px-4 py-2 bg-[#1b4332] hover:bg-[#2d5a45] text-white text-xs font-bold rounded-xl transition-all flex items-center gap-1.5 justify-center cursor-pointer shadow-xs w-full sm:w-auto"
             >
               <Edit2 className="w-3.5 h-3.5" />
               <span>{isEditingLocation ? 'Cancel Edit' : 'Edit Location Origin'}</span>
             </button>
 
-            <div className="bg-[#f3f9f5] px-4 py-2.5 rounded-2xl border border-[#2c694e]/20">
+            <div className="bg-[#f3f9f5] px-4 py-2.5 rounded-2xl border border-[#2c694e]/20 w-full sm:w-auto">
               <p className="text-[10px] text-[#717973] uppercase font-bold">Land Holding</p>
               <p className="text-base font-extrabold text-[#012d1d]">{farmerProfile.landAreaAcres || 5.0} Acres</p>
             </div>
